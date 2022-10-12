@@ -37,6 +37,8 @@ $social-media-angular-dark-theme: mat.define-dark-theme((
 
 .dark-theme
 {
+
+
   @include mat.all-component-themes($social-media-angular-dark-theme);
 }
 
