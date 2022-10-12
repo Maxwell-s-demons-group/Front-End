@@ -15,7 +15,11 @@ import { CommentComponent } from './components/comment/comment.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
 import { UserInitialsPipe } from './pipes/user-initials.pipe';
 import { NavbarComponent } from './components/navbar/navbar.component';
+
+import { LikeComponent } from './like/like.component';
+
 import { SearchComponent } from './components/search/search.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { SearchComponent } from './components/search/search.component';
     UserCardComponent,
     NavbarComponent,
     UserInitialsPipe,
+
+    LikeComponent,
+
     SearchComponent,
+
   ],
   imports: [
     BrowserModule,

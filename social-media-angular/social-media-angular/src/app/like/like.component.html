@@ -1,0 +1,34 @@
+<p>
+    {{post.likes.length}}
+</p> 
+<div class="Like or Dislike" align="right">
+    <div class="Like" >
+        
+        <button [disabled] = "numOfLikes>0" mat-raised-button color="primary" (click)="submitLike()">Like</button>
+     </div> 
+    <!-- <div class="Dislike" (click)="dislikePost()"> -->
+        <!-- Dislike -->
+    <!-- </div> -->
+
+
+     <!-- <form class="form" *ngIf="numOfLikes"  (ngSubmit)="submitLike()">  
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Make a Post</mat-label>
+            <textarea matInput autofocus formControlName="text"></textarea>
+        </mat-form-field>
+    
+        <div align="end">
+            <button [disabled] = "numOfLikes>0" mat-raised-button color="primary" (click)="submitLike()">Like</button>
+           <button [disabled] = "numOfLikes<0" mat-raised-button color="warn" (click)="dislikePost()">Dislike</button>
+            <p *ngIf = "post">{{post.likes.length}}</p>
+           
+        </div>
+    </form>   -->
+</div>
+<!--
+<div *ngFor="let like of post.likes" class="post-container">
+    <mat-divider></mat-divider>
+    <app-like [post]="post"></app-like>
+</div>
+-->
+
