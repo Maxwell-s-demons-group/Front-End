@@ -1,6 +1,6 @@
 <div class="post-card">
     <mat-card>
-        <mat-card-header>
+        <mat-card-header *ngIf = "post.author">
             <div mat-card-avatar class="header-image"></div>
             <mat-card-title>{{post.author.firstName}} {{post.author.lastName}}</mat-card-title>
             <mat-card-subtitle>{{post.author.email}}</mat-card-subtitle>
@@ -17,6 +17,14 @@
         </mat-card-content>
         <mat-card-actions align="end">
             <button mat-raised-button color="primary" (click)="toggleReplyToPost()">Reply</button>
+            
+          <!--  <button [disabled] = "numOfLikes>0" mat-raised-button color="primary" (click) = 'likePost()'>Like </button>
+            <button [disabled] = "numOfLikes<0" mat-raised-button color="primary" (click) = "dislikePost()">Disike </button>
+            <p>{{numOfLikes}}</p>
+            -->
+            <app-like [post]="post"></app-like>
+            <!-- <app-like></app-like> -->
+           
         </mat-card-actions>
         <form class="form" *ngIf="replyToPost" [formGroup]="commentForm" (ngSubmit)="submitReply($event)">
             <mat-form-field class="full-width" appearance="fill">
