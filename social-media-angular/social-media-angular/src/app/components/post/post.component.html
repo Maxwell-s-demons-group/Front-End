@@ -1,5 +1,5 @@
 <div class="post-card">
-    <mat-card>
+    <mat-card *ngIf="post">
         <mat-card-header>
             <div mat-card-avatar class="header-image"></div>
             <mat-card-title>{{post.author.firstName}} {{post.author.lastName}}</mat-card-title>
