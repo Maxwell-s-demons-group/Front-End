@@ -33,8 +33,15 @@ export class CommentComponent implements OnInit {
     this.postService.upsertPost({...this.inputComment, comments: [...this.inputComment.comments, newComment]})
       .subscribe(
         (response) => {
-          this.inputComment = response
-          this.toggleReplyToComment()
+          
+          if(response == null){
+            alert("this comment contains profanity");
+          }
+
+          else{
+            this.inputComment = response;
+            this.toggleReplyToComment();
+          }
         }
       )
   }
