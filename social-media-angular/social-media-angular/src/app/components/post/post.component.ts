@@ -42,8 +42,16 @@ export class PostComponent implements OnInit {
     this.postService.upsertPost({...this.post, comments: [...this.post.comments, newComment]})
       .subscribe(
         (response) => {
-          this.post = response
-          this.toggleReplyToPost()
+
+          if(response == null){
+            alert("this comment contains profanity");
+          }
+
+          else{
+            this.post = response
+            this.toggleReplyToPost()
+          }
+          
         }
       )
   }
