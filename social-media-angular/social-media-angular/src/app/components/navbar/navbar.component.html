@@ -2,8 +2,10 @@
     <mat-toolbar>
         <span [routerLink]="['/post-feed']">Revature Social Media</span>
         <span class="spacer"></span>
-        <button [routerLink]="['/search']">Search</button>
-        <span class="spacer"></span>
+        
+        
+        <button mat-button [routerLink]="['/search']">Search</button>
+        
         <button mat-button (click)="logout();">Logout</button>
     </mat-toolbar>
 </p>
