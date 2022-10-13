@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -21,6 +22,7 @@ import { LikeComponent } from './like/like.component';
 import { SearchComponent } from './components/search/search.component';
 
 
+import {MatToolbarModule} from '@angular/material/toolbar'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,9 +47,13 @@ import { SearchComponent } from './components/search/search.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    FormsModule
+    FormsModule,
+    MatSlideToggleModule,
+    MatToolbarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  
 })
 export class AppModule { }

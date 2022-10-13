@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'social-media-angular';
+  isDarkTheme = false;
+
+  toggleTheme()
+  {
+    this.isDarkTheme=! this.isDarkTheme;
+  }
+
 }
