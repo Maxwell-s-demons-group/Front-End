@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   withCredentials: true,
-  baseUrl: "http://localhost:8080",
+  baseUrl: "http://projectthreebean-env.eba-czwka6nm.us-east-1.elasticbeanstalk.com",
   headers: {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': 'http://localhost:4200',
