@@ -40,8 +40,14 @@ export class PostFeedPageComponent implements OnInit {
     this.postService.upsertPost(new Post(0, this.postForm.value.text || "", this.postForm.value.imageUrl || "", this.authService.currentUser, [],[]))
       .subscribe(
         (response) => {
-          this.posts = [response, ...this.posts]
-          this.toggleCreatePost()
+          if(response == null){
+            alert("this post contains profanity");
+          }
+
+          else{
+            this.posts = [response, ...this.posts]
+            this.toggleCreatePost()
+          }
         }
       )
   }
