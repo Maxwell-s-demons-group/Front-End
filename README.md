@@ -8,8 +8,8 @@ used to host the back-end and front-end on the cloud.
 
 In this project we faced a few challenges. The first problem we encountered was with profanities. We created a profanity filter that wouldn't allow profanities to 
 be posted, but then we noticed they could still be posted in the replies to posts. This was solved by creating a second filter for the comments. Creating a 
-second profanity fillter however made a new problem where if it took a null value the server would return a 500 error. the solution to that was to just use the second
-fillter only if the first fillter was not null. The second issue we faced was when we tried to use the search button to search for people. The search button wouldn't
+second profanity filter however made a new problem where if it took a null value the server would return a 500 error. the solution to that was to just use the second
+filter only if the first filter was not null. The second issue we faced was when we tried to use the search button to search for people. The search button wouldn't
 return anyone even though the people we were searching for were in the database. The search button somehow wasn't connecting to that database. To solve this we created
 a custom query in the UserController in the back-end. Another challenge faced was when trying to connect the front-end and back-end for the like button. The like button
 worked in the front-end when clicked but nothing would update in the back-end when it was clicked. To solve this we corrected some code in the front-end, which was 
