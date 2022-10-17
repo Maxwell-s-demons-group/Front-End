@@ -4,6 +4,7 @@ import Post from 'src/app/models/Post';
 import User from 'src/app/models/User';
 import { AuthService } from 'src/app/services/auth.service';
 import { PostService } from 'src/app/services/post.service';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-like',
@@ -11,6 +12,8 @@ import { PostService } from 'src/app/services/post.service';
   styleUrls: ['./like.component.css']
 })
 export class LikeComponent implements OnInit {
+
+  faThumbsUp = faThumbsUp;
 
   commentForm = new FormGroup({
     text: new FormControl(''),

@@ -1,18 +1,15 @@
 
 .searchbar{
-    width: 1000px;
+    /* width: 1000px; */
+    overflow: hidden;
     margin: auto;
-    background-color: #FFA552;
+    background-color: rgb(242, 105, 38);;
     flex: auto;
     
 }
-
 .user{
     width: 1000px;
     flex: auto;
-   
-
-
 }
 .space{
     margin: 1cm;
