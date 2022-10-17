@@ -8,7 +8,7 @@ export const environment = {
   baseUrl: "http://projectthreebean-env.eba-czwka6nm.us-east-1.elasticbeanstalk.com",
   headers: {
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': 'http://localhost:4200',
+    'Access-Control-Allow-Origin': 'http://proj3-frontend-bucket.s3-website-us-east-1.amazonaws.com',
   },
 };
 
