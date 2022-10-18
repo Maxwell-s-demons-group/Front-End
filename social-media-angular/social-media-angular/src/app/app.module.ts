@@ -22,7 +22,9 @@ import { LikeComponent } from './like/like.component';
 import { SearchComponent } from './components/search/search.component';
 
 
-import {MatToolbarModule} from '@angular/material/toolbar'; 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,8 +52,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     FormsModule,
     MatSlideToggleModule,
     MatToolbarModule,
+    FontAwesomeModule,
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
   

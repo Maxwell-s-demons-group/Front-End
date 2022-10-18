@@ -1,10 +1,11 @@
-<p>
+<!-- <p>
     {{post.likes.length}}
-</p> 
+</p>  -->
 <div class="Like or Dislike" align="right">
     <div class="Like" >
-        
-        <button [disabled] = "numOfLikes>0" mat-raised-button color="primary" (click)="submitLike()">Like</button>
+        <fa-icon class="icon" [icon]="faThumbsUp" [disabled] = "numOfLikes>0" (click)="submitLike()"></fa-icon>
+        &nbsp;&nbsp;{{post.likes.length}}
+        <!-- <button [disabled] = "numOfLikes>0" mat-raised-button color="primary" (click)="submitLike()">Like</button> -->
      </div> 
     <!-- <div class="Dislike" (click)="dislikePost()"> -->
         <!-- Dislike -->
